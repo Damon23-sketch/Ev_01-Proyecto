@@ -1,0 +1,711 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo naranja simulando la imagen de referencia */
+.contenedor-fondo {
+    background-color: #fca326; /* Naranja base */
+    /* Eliminamos min-height: 100vh; */
+    padding-top: 10px;
+    padding-bottom: 0; /* Sin espacio extra para que conecte con el banner */
+}
+
+/* Contenedor principal de la barra usando Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 40px;
+    border-radius: 0 0 15px 15px; 
+    
+    /* NUEVAS REGLAS PARA EVITAR QUE SE ESTIRE DEMASIADO */
+    max-width: 1200px; /* Limita el ancho máximo */
+    width: 95%; /* Toma el 95% en pantallas más pequeñas */
+    margin: 0 auto; /* Centra la barra horizontalmente */
+}
+
+/* Estilo del logotipo */
+.logo {
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de los enlaces usando Flexbox */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* Espaciado entre cada enlace */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #fca326;
+}
+
+/* Contenedor de la barra de búsqueda y el perfil */
+.seccion-derecha {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el buscador y el perfil */
+}
+
+/* Estilo del campo de búsqueda */
+.caja-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    width: 220px;
+}
+
+.caja-busqueda input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Icono de búsqueda */
+.icono-lupa {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* Icono de perfil de usuario */
+.icono-perfil {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal del banner */
+.banner {
+    background-color: #fba12b; /* Fondo naranja */
+    position: relative;
+    overflow: hidden;
+    padding: 60px 50px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/* Forma curva roja en la parte inferior */
+.fondo-rojo {
+    position: absolute;
+    bottom: -50px;
+    right: -10%;
+    width: 120%;
+    height: 200px;
+    background-color: #ff474d;
+    border-top-left-radius: 50% 100px;
+    border-top-right-radius: 50% 100px;
+    z-index: 1;
+}
+
+/* Contenedor Flexbox para alinear el texto y la imagen */
+.banner-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Para que quede por encima del fondo rojo */
+    gap: 40px;
+}
+
+/* Estilos de la columna de texto */
+.columna-texto {
+    flex: 1;
+}
+
+.columna-texto h1 {
+    font-size: 55px;
+    color: #111111;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.columna-texto p {
+    font-size: 20px;
+    color: #111111;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* Botón azul */
+.btn-explorar {
+    display: inline-block;
+    background-color: #0b3dd1;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.btn-explorar:hover {
+    background-color: #092da0;
+}
+
+/* Contenedor de la imagen */
+.columna-imagen {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos de la imagen inclinada */
+.imagen-dibujo {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    transform: rotate(-10deg); /* Inclinación de la imagen */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border: 8px solid #ffffff; /* Borde blanco como en la foto */
+}
+
+/* Chispas amarillas decorativas */
+.chispa {
+    position: absolute;
+    background-color: #fcfc33;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.chispa1 {
+    width: 45px;
+    height: 14px;
+    top: 0px;
+    left: -20px;
+    transform: rotate(-45deg);
+}
+
+.chispa2 {
+    width: 35px;
+    height: 14px;
+    top: 45px;
+    left: -40px;
+    transform: rotate(-15deg);
+}
+
+.chispa3 {
+    width: 40px;
+    height: 14px;
+    top: 90px;
+    left: -15px;
+    transform: rotate(15deg);
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la sección */
+.seccion-principal {
+    background-color: #c9f9f9; /* Fondo celeste claro */
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    min-height: 100vh;
+}
+
+/* --- COLUMNA IZQUIERDA (Info) --- */
+.columna-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+}
+
+.tarjeta-info {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 15px;
+    gap: 15px;
+}
+
+.verde {
+    background-color: #9bfb9b;
+    color: #000;
+}
+
+.amarillo {
+    background-color: #fdf314;
+    color: #000;
+}
+
+.rojo {
+    background-color: #ff5c5c;
+}
+
+.icono-info {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.texto-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.texto-info p {
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.texto-blanco h3,
+.texto-blanco p {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* --- LÍNEA DIVISORIA --- */
+.linea-divisoria {
+    width: 1px;
+    background-color: #a5a5a5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* --- COLUMNA DERECHA (Categorías) --- */
+.columna-categorias {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.titulo-categorias {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.grid-categorias {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjeta-categoria {
+    flex: 1;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.azul {
+    background-color: #2c3cff;
+}
+
+.morado {
+    background-color: #a400ff;
+}
+
+/* Contenedor blanco para las imágenes de las categorías */
+.contenedor-imagen {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-categoria {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tarjeta-categoria h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.titulo-subrayado {
+    text-decoration: underline;
+}
+
+.tarjeta-categoria p {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empuja el botón hacia abajo */
+}
+
+/* Botones "Ver más" */
+.btn-ver-mas {
+    background-color: #534c4c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #3b3535;
+}
+
+/* Reseteo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la sección */
+.seccion-explora {
+    background-color: #c9fcb1; /* Fondo verde claro */
+    display: flex;
+    justify-content: space-between; /* Separa el texto de la imagen */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 40px 60px;
+    min-height: 350px;
+    gap: 40px;
+}
+
+/* Estilos de la columna de texto */
+.columna-texto {
+    flex: 1;
+    max-width: 450px;
+}
+
+.columna-texto h2 {
+    font-size: 42px;
+    color: #0b1509;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.columna-texto p {
+    font-size: 22px;
+    color: #0b1509;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* Botón "Saber más" */
+.btn-saber-mas {
+    display: inline-block;
+    background-color: #176f18; /* Verde oscuro */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-saber-mas:hover {
+    background-color: #115212;
+}
+
+/* Estilos de la columna de imagen */
+.columna-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Imagen con bordes redondeados */
+.imagen-herramientas {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px; /* Bordes muy redondeados como en la referencia */
+}
+
+/* Reseteo básico de la página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la sección con fondo amarillo */
+.seccion-destacado {
+    background-color: #fcf47c; /* Amarillo claro basado en la imagen */
+    padding: 30px 0 50px 0;
+    text-align: center;
+    overflow: hidden; /* Oculta lo que sobrepasa los bordes laterales */
+}
+
+/* Estilo del título */
+.titulo-destacado {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+/* --- CONTENEDOR DEL CARRUSEL --- */
+.carrusel-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Separación entre las tarjetas */
+    margin-bottom: 30px;
+}
+
+/* --- TARJETAS LATERALES --- */
+.tarjeta-lateral {
+    width: 320px;
+    height: 260px;
+    border-radius: 40px; /* Bordes muy redondeados */
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.tarjeta-lateral img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- TARJETA CENTRAL DESTACADA --- */
+.caja-central {
+    width: 520px;
+    height: 280px;
+    border: 3px solid #00a2ff; /* Borde rectangular azul brillante */
+    flex-shrink: 0;
+    display: flex;
+    /* Al no tener fondo, el amarillo asoma por las esquinas del borde exterior */
+}
+
+.imagen-central {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 65px; /* Crea el efecto de cápsula interna */
+}
+
+/* --- PAGINACIÓN (Puntos) --- */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.punto {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+/* Punto central activo (negro) */
+.punto.activo {
+    background-color: #000000;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la sección */
+.seccion-destacado {
+    background-color: #fdf582; /* Amarillo claro de fondo */
+    padding: 40px 0 60px 0;
+    text-align: center;
+    overflow: hidden; /* Evita que el contenido desborde horizontalmente */
+}
+
+/* Estilo del título */
+.titulo-destacado {
+    font-size: 22px;
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* --- CONTENEDOR DEL CARRUSEL --- */
+.carrusel-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Espaciado entre las imágenes */
+    margin-bottom: 35px;
+}
+
+/* Estilos compartidos para las tarjetas */
+.tarjeta-carrusel {
+    border-radius: 50px; /* Bordes muy redondeados */
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sutil sombra para dar profundidad */
+}
+
+.tarjeta-carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Tamaño de las tarjetas laterales */
+.tarjeta-lateral {
+    width: 300px;
+    height: 240px;
+}
+
+/* Tamaño de la tarjeta central (más ancha) */
+.tarjeta-central {
+    width: 480px;
+    height: 250px;
+}
+
+/* --- PAGINACIÓN --- */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Estilo de los puntos */
+.punto {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #000000; /* Borde negro */
+    cursor: pointer;
+}
+
+/* Punto activo (relleno negro) */
+.punto.activo {
+    background-color: #000000;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Simulación de la sección superior amarilla para dar contexto */
+.simulacion-seccion-amarilla {
+    background-color: #fcf47c;
+    height: 30px;
+}
+
+/* --- CONTENEDOR PRINCIPAL DEL FOOTER --- */
+.pie-pagina {
+    background-color: #050505; /* Fondo negro */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Separa los bloques a los extremos */
+    align-items: center; /* Centra verticalmente */
+    padding: 25px 50px;
+}
+
+/* --- SECCIÓN IZQUIERDA --- */
+.footer-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Separación entre el logo y los iconos sociales */
+}
+
+/* Estilo del logotipo */
+.logo-footer {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de iconos sociales */
+.redes-sociales {
+    display: flex;
+    gap: 15px; /* Separación entre cada icono */
+    align-items: center;
+}
+
+.icono-red {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.icono-red:hover {
+    transform: scale(1.1); /* Pequeño efecto al pasar el mouse */
+}
+
+/* --- SECCIÓN DERECHA (ENLACES) --- */
+.enlaces-footer {
+    display: flex;
+    list-style: none;
+    gap: 25px; /* Separación entre los textos */
+}
+
+.enlaces-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.enlaces-footer a:hover {
+    color: #cccccc;
+    text-decoration: underline;
+}
+
